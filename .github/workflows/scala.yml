@@ -23,4 +23,4 @@ jobs:
         uses: VirtusLab/scala-cli-setup@v1
 
       - name: Compile
-        run: scala-cli compile .
+        run: scala-cli compile ./ModelTypes.scala
