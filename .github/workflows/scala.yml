@@ -8,19 +8,19 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v7
-    - name: Set up JDK
-      uses: actions/setup-java@v5
-      with:
-        java-version: '25'
-        distribution: 'temurin'
+      - uses: actions/checkout@v7
 
-    - name: Set up sbt
-      uses: sbt/setup-sbt@v1
-        
-    - name: Compile
-      run: sbt compile
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+
+      - name: Set up Scala CLI
+        uses: VirtusLab/scala-cli-setup@v1
+
+      - name: Compile
+        run: scala-cli compile .
