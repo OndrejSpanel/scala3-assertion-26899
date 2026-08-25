@@ -1,3 +1,4 @@
+//> using jvm "temurin:25"
 //> using scala "3.9.0-RC6"
 //> using dep "io.bullet::borer-core:1.17.0"
 //> using dep "io.bullet::borer-derivation:1.17.0"
